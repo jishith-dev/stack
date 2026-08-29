@@ -1,0 +1,154 @@
+struct Stack {
+    List<int> ints
+    List<bool> bools
+    List<double> doubles
+    List<long> longs
+    List<byte> bytes
+    List<string> strings
+
+    pushInt(int v) void {
+        this.ints.push(v)
+    }
+
+    popInt() int {
+        int index = this.ints.length - 1
+        int value = this.ints[index]
+        this.ints.removeAt(index)
+        return value
+    }
+
+    peekInt() int {
+        int index = this.ints.length - 1
+        return this.ints[index]
+    }
+
+    sizeInt() int {
+        return this.ints.length
+    }
+
+    isEmptyInt() bool {
+        return this.ints.length == 0
+    }
+
+    pushBool(bool v) void {
+        this.bools.push(v)
+    }
+
+    popBool() bool {
+        int index = this.bools.length - 1
+        bool value = this.bools[index]
+        this.bools.removeAt(index)
+        return value
+    }
+
+    peekBool() bool {
+        int index = this.bools.length - 1
+        return this.bools[index]
+    }
+
+    sizeBool() int {
+        return this.bools.length
+    }
+
+    isEmptyBool() bool {
+        return this.bools.length == 0
+    }
+
+    pushDouble(double v) void {
+        this.doubles.push(v)
+    }
+
+    popDouble() double {
+        int index = this.doubles.length - 1
+        double value = this.doubles[index]
+        this.doubles.removeAt(index)
+        return value
+    }
+
+    peekDouble() double {
+        int index = this.doubles.length - 1
+        return this.doubles[index]
+    }
+
+    sizeDouble() int {
+        return this.doubles.length
+    }
+
+    isEmptyDouble() bool {
+        return this.doubles.length == 0
+    }
+
+    pushLong(long v) void {
+        this.longs.push(v)
+    }
+
+    popLong() long {
+        int index = this.longs.length - 1
+        long value = this.longs[index]
+        this.longs.removeAt(index)
+        return value
+    }
+
+    peekLong() long {
+        int index = this.longs.length - 1
+        return this.longs[index]
+    }
+
+    sizeLong() int {
+        return this.longs.length
+    }
+
+    isEmptyLong() bool {
+        return this.longs.length == 0
+    }
+
+    pushByte(byte v) void {
+        this.bytes.push(v)
+    }
+
+    popByte() byte {
+        int index = this.bytes.length - 1
+        byte value = this.bytes[index]
+        this.bytes.removeAt(index)
+        return value
+    }
+
+    peekByte() byte {
+        int index = this.bytes.length - 1
+        return this.bytes[index]
+    }
+
+    sizeByte() int {
+        return this.bytes.length
+    }
+
+    isEmptyByte() bool {
+        return this.bytes.length == 0
+    }
+
+    pushString(string v) void {
+        this.strings.push(v)
+    }
+
+    popString() string {
+        int index = this.strings.length - 1
+        string value = this.strings[index]
+        this.strings.removeAt(index)
+        return value
+    }
+
+    peekString() string {
+        int index = this.strings.length - 1
+        return this.strings[index]
+    }
+
+    sizeString() int {
+        return this.strings.length
+    }
+
+    isEmptyString() bool {
+        return this.strings.length == 0
+    }
+}
+
+export (Stack)
