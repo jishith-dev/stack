@@ -1,5 +1,7 @@
 # Stack
 
+Author: Jishith M P
+
 A simple LIFO (Last In, First Out) Stack collection for Zen with type-specific operations for:
 
 - `int`

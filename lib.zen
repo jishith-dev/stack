@@ -1,24 +1,34 @@
 struct Stack {
-    List<int> ints
-    List<bool> bools
-    List<double> doubles
-    List<long> longs
-    List<byte> bytes
-    List<string> strings
+    private List<int> ints = []
+    private List<bool> bools = []
+    private List<double> doubles = []
+    private List<long> longs = []
+    private List<byte> bytes = []
+    private List<string> strings = []
+
+    private guard(int length) void {
+        if (length == 0) {
+            sys.panic("Stack is empty")
+        }
+    }
 
     pushInt(int v) void {
         this.ints.push(v)
     }
 
     popInt() int {
-        int index = this.ints.length - 1
+        int len = this.ints.length
+        this.guard(len)
+        int index = len - 1
         int value = this.ints[index]
         this.ints.removeAt(index)
         return value
     }
 
     peekInt() int {
-        int index = this.ints.length - 1
+        int len = this.ints.length
+        this.guard(len)
+        int index = len - 1
         return this.ints[index]
     }
 
@@ -35,14 +45,18 @@ struct Stack {
     }
 
     popBool() bool {
-        int index = this.bools.length - 1
+        int len = this.bools.length
+        this.guard(len)
+        int index = len - 1
         bool value = this.bools[index]
         this.bools.removeAt(index)
         return value
     }
 
     peekBool() bool {
-        int index = this.bools.length - 1
+        int len = this.bools.length
+        this.guard(len)
+        int index = len - 1
         return this.bools[index]
     }
 
@@ -59,14 +73,18 @@ struct Stack {
     }
 
     popDouble() double {
-        int index = this.doubles.length - 1
+        int len = this.doubles.length
+        this.guard(len)
+        int index = len - 1
         double value = this.doubles[index]
         this.doubles.removeAt(index)
         return value
     }
 
     peekDouble() double {
-        int index = this.doubles.length - 1
+        int len = this.doubles.length
+        this.guard(len)
+        int index = len - 1
         return this.doubles[index]
     }
 
@@ -83,14 +101,18 @@ struct Stack {
     }
 
     popLong() long {
-        int index = this.longs.length - 1
+        int len = this.longs.length
+        this.guard(len)
+        int index = len - 1
         long value = this.longs[index]
         this.longs.removeAt(index)
         return value
     }
 
     peekLong() long {
-        int index = this.longs.length - 1
+        int len = this.longs.length
+        this.guard(len)
+        int index = len - 1
         return this.longs[index]
     }
 
@@ -107,14 +129,18 @@ struct Stack {
     }
 
     popByte() byte {
-        int index = this.bytes.length - 1
+        int len = this.bytes.length
+        this.guard(len)
+        int index = len - 1
         byte value = this.bytes[index]
         this.bytes.removeAt(index)
         return value
     }
 
     peekByte() byte {
-        int index = this.bytes.length - 1
+        int len = this.bytes.length
+        this.guard(len)
+        int index = len - 1
         return this.bytes[index]
     }
 
@@ -131,14 +157,18 @@ struct Stack {
     }
 
     popString() string {
-        int index = this.strings.length - 1
+        int len = this.strings.length
+        this.guard(len)
+        int index = len - 1
         string value = this.strings[index]
         this.strings.removeAt(index)
         return value
     }
 
     peekString() string {
-        int index = this.strings.length - 1
+        int len = this.strings.length
+        this.guard(len)
+        int index = len - 1
         return this.strings[index]
     }
 
@@ -152,3 +182,4 @@ struct Stack {
 }
 
 export (Stack)
+

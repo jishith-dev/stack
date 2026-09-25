@@ -1,6 +1,6 @@
 {
   "name": "stack",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Jishith-dev",
   "repo": "https://github.com/Jishith-dev/stack",
   "description": "Stack collection for Zen with LIFO operations and type-specific support for int, bool, double, long, byte, and string.",
